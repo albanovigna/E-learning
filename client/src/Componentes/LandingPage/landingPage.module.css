@@ -1,57 +1,74 @@
 .landingButton {
-    display: flex;
-    font-size: 25px;
-    font-family: sans-serif;
-    padding: 15px;
-    letter-spacing: 2px;
-    margin-top: 20px;
-    color: white;
-    align-self: center;
-    height: fit-content;
-    /* background-color: var(--color4); */
-    background-color: rgba(255, 157, 0, 0.992);
-    border-radius: 10px;
+  display: flex;
+  font-size: 25px;
+  font-family: sans-serif;
+  padding: 15px;
+  letter-spacing: 2px;
+  margin-top: 20px;
+  color: white;
+  align-self: center;
+  height: fit-content;
+  /* background-color: var(--color4); */
+  background-color: rgba(255, 157, 0, 0.992);
+  border-radius: 10px;
 }
 .landingButton:hover {
-    background-color: rgb(120, 3, 138);
-    cursor: pointer;
+  background-color: rgb(120, 3, 138);
+  cursor: pointer;
 }
 
 .container {
-    display: flex;  
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 700px;
-    width: auto;
-    background: rgb(11,82,91);
-    box-shadow: inset 0 25px 35px -25px #111;
-    background: linear-gradient(260deg, rgba(11,82,91,1) 0%, rgba(27,58,75,1) 30%, rgba(77,25,77,1) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 700px;
+  width: auto;
+  background: rgb(11, 82, 91);
+  box-shadow: inset 0 25px 35px -25px #111;
+  background: linear-gradient(
+    260deg,
+    rgba(11, 82, 91, 1) 0%,
+    rgba(27, 58, 75, 1) 30%,
+    rgba(77, 25, 77, 1) 100%
+  );
 }
 
 .text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .container h1 {
-    font-family: 'Gugi', cursive;
-    letter-spacing: 4px;
-    color: white;
-    font-size: 120px;
-    text-shadow: 5px 5px 5px rgba(13, 167, 187, 0.67);
+  font-family: "Gugi", cursive;
+  letter-spacing: 4px;
+  color: white;
+  font-size: 120px;
+  text-shadow: 5px 5px 5px rgba(13, 167, 187, 0.67);
 }
 
 .container h2 {
-    font-family:'Montserrat', sans-serif;
-    color: white;
-    letter-spacing: 1px;
-    font-size: 25px;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  letter-spacing: 1px;
+  font-size: 25px;
 }
 
 .container a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    height: 100vh;
+  }
+  .container h1 {
+    font-size: 60px;
+  }
+  .container h2 {
+    font-size: 15px;
+  }
+}

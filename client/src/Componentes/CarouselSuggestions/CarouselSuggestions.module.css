@@ -131,3 +131,113 @@
   box-shadow: 0px 0px 10px 1px black;
   padding: 0px;
 }
+
+@media (max-width: 1280px) {
+  .carouselSuggestions {
+    width: 100%;
+  }
+  .carouselContainer {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(213, 213, 213, 0.862);
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    padding: 10px;
+    box-shadow: 0px 0px 5px 1px black;
+  }
+  .carouselTitle {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .carouselSlides {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .carouselSlideContent {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    margin-bottom: 0px;
+  }
+  .carouselSlideInfo h1 {
+    max-width: 350px;
+    margin: 20px 0px 0px 0px;
+    text-align: center;
+  }
+  .carouselSlideContentRewiew p {
+    margin-right: 25px;
+  }
+  .carouselSlideContentImage {
+    width: 300px;
+    height: auto;
+    box-shadow: 0px 0px 10px 1px black;
+    padding: 0px;
+  }
+  .carouselSlideContentDescription {
+    margin: 0px;
+    max-width: 350px;
+    text-align: center;
+  }
+  .linkBtn {
+    display: flex;
+    margin: 0px;
+    justify-content: center;
+    width: 100%;
+  }
+  .carouselSlideContentButton {
+    position: relative;
+    margin: 0px;
+  }
+  .carouselSlideInfo button {
+    margin: 0px;
+  }
+  .carouselArrows {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 50px;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 10px;
+  }
+  .carouselArrows .button1 {
+    display: none;
+  }
+  .carouselArrows .button2 {
+    display: block;
+    background: none;
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .divButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    margin-top: 0;
+  }
+  .carouselSlideActive {
+    width: auto;
+    padding: 0px;
+  }
+  .carouselSlideInfo {
+    position: relative;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}

@@ -36,9 +36,9 @@
   justify-content: space-between;
 }
 
-.card p{
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
+.card p {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
 }
 
 .info div {
@@ -52,3 +52,9 @@
   opacity: 0.7;
 }
 
+@media (max-width: 768px) {
+  .card {
+    height: auto;
+    width: 300px;
+  }
+}

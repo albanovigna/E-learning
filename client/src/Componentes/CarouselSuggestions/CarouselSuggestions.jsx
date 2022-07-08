@@ -2,10 +2,13 @@ import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import styles from "./CarouselSuggestions.module.css";
+import { useMediaQuery } from "react-responsive";
 
 function CarouselSuggestions({ loggedUser }) {
   const courses = useSelector((state) => state.coursesBackUp);
   const user = useSelector((state) => state.userDetail);
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 767px)" });
+  const isDesktopOrLaptop = useMediaQuery({ query: "(min-width: 768px)" });
   let userCategory = null;
   let suggestedCourses = null;
   if (user.categories) {
@@ -91,6 +94,7 @@ function CarouselSuggestions({ loggedUser }) {
               &#9664;
             </button>
           </div>
+
           <div className={styles.carouselSlides}>
             {newCourses.map((course, index) => {
               return (
@@ -145,6 +149,21 @@ function CarouselSuggestions({ loggedUser }) {
               );
             })}
           </div>
+          {/* {isTabletOrMobile && (
+            <div className={styles.divButtons}>
+              <div className={styles.carouselArrows}>
+                <button className={styles.button2} onClick={() => prevSlide()}>
+                  {" "}
+                  &#9664;
+                </button>
+              </div>
+              <div className={styles.carouselArrows}>
+                <button className={styles.button2} onClick={() => nextSlide()}>
+                  &#9654;
+                </button>
+              </div>
+            </div>
+          )} */}
           <div className={styles.carouselArrows}>
             <button className={styles.button1} onClick={() => nextSlide()}>
               &#9654;
@@ -210,7 +229,10 @@ function CarouselSuggestions({ loggedUser }) {
                           {" "}
                           Precio : ${course.price}
                         </h4>
-                        <Link to={`/courses/id/${course.id}`}>
+                        <Link
+                          className={styles.linkBtn}
+                          to={`/courses/id/${course.id}`}
+                        >
                           <button className={styles.carouselSlideContentButton}>
                             Ver curso
                           </button>
@@ -221,6 +243,27 @@ function CarouselSuggestions({ loggedUser }) {
                 </div>
               );
             })}
+            {isTabletOrMobile && (
+              <div className={styles.divButtons}>
+                <div className={styles.carouselArrows}>
+                  <button
+                    className={styles.button2}
+                    onClick={() => prevSlide()}
+                  >
+                    {" "}
+                    &#9664;
+                  </button>
+                </div>
+                <div className={styles.carouselArrows}>
+                  <button
+                    className={styles.button2}
+                    onClick={() => nextSlide()}
+                  >
+                    &#9654;
+                  </button>
+                </div>
+              </div>
+            )}
           </div>
           <div className={styles.carouselArrows}>
             <button className={styles.button1} onClick={() => nextSlide()}>

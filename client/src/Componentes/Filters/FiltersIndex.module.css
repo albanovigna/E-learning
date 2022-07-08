@@ -1,41 +1,31 @@
 .containerFilters {
-
   display: flex;
   flex-direction: row;
-  
-
 }
 
 .containerSelect {
-
   display: flex;
   align-items: center;
   padding: 7px 20px;
-  background-color: #4D194D;
+  background-color: #4d194d;
   border: rgba(255, 157, 0, 0.992) solid 2px;
   border-radius: 10px;
   margin-right: 15px;
   margin-left: 2rem;
   height: 30px;
-
 }
 
 .select {
-
   background-color: transparent;
   border: none;
   color: rgb(255, 255, 255);
   font-size: 14px;
-  font-family: 'Montserrat',
-  sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
   /* flex-grow: 1; */
-
 }
 
-
 .containerSelectMap {
-
   display: flex;
   align-items: center;
   padding: 7px 20px;
@@ -45,22 +35,17 @@
   margin-right: 15px;
   margin-left: 2rem;
   height: 15px;
-
-
-
 }
-
 
 .containerSelectMap button {
   font-size: 11px;
   padding: 2px 5px;
   border-radius: 2px;
-  color: rgb(255, 255, 255) ;
+  color: rgb(255, 255, 255);
   background-color: transparent;
-  border: #4D194D solid 1px;
+  border: #4d194d solid 1px;
   margin: 10px 5px;
 }
-
 
 .select option {
   color: rgb(255, 255, 255);
@@ -72,22 +57,33 @@
 }
 
 .map {
-
   margin: 10px;
   position: absolute;
   z-index: 1;
   display: flex;
   flex-direction: column;
-  background: #1B3A4B ;
- border-radius: 5px;
+  background: #1b3a4b;
+  border-radius: 5px;
 }
 
-.selecttodo{
-  background-color: #4D194D;
-  border-color: #4D194D;
+.selecttodo {
+  background-color: #4d194d;
+  border-color: #4d194d;
   border-radius: 10px;
   color: rgb(255, 255, 255);
   font-size: 14px;
-  font-family: 'Montserrat',
-  
+  font-family: "Montserrat";
+}
+
+@media (max-width: 768px) {
+  .containerFilters {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .containerFilters div {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
 }

@@ -156,3 +156,9 @@ input[id="3"]:checked ~ .pagination .paginationitem[for="3"] {
     transform: translate3d(calc(-100% * 2), 0, 0);
   }
 }
+
+@media (max-width: 768px) {
+  .contDescription {
+    height: auto;
+  }
+}

@@ -6,7 +6,6 @@
   bottom: 0;
   width: 100%;
   margin-bottom: 50px;
-
 }
 
 .paginationUl {
@@ -29,8 +28,6 @@
   font-weight: 500;
   cursor: pointer;
   margin: 0px 10px 0 10px;
-
-  
 }
 
 .paginationUl li.numb {
@@ -55,7 +52,6 @@
   height: 45px;
   width: 45px;
   border-radius: 50%;
-
 }
 
 .paginationUl li.dots {
@@ -150,7 +146,6 @@
     border-radius: 5px 25px 25px 5px;
     width: 60px;
     height: 45px;
-    
   }
   .paginationUl li button.buttonPrev i,
   .paginationUl li button.buttonNext i {
@@ -159,7 +154,7 @@
 
   .paginationUl li.active {
     background-color: white;
-    color: #20b2aa;
+    color: var(--color5);
     height: 45px;
     width: 45px;
     border-radius: 50%;
@@ -171,7 +166,7 @@
   .paginationUl li.first:hover,
   .paginationUl li.last:hover {
     color: #fff;
-    background: #20b2aa;
+    background: var(--color5);
   }
 }
 

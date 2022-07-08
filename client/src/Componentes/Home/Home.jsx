@@ -9,10 +9,11 @@ import styles from "./Home.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import Carousel from "../Carousel/Carousel";
 import CarouselSuggestions from "../CarouselSuggestions/CarouselSuggestions";
+import { useMediaQuery } from "react-responsive";
 
 export default function Home() {
   const dispatch = useDispatch();
-
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 767px)" });
   useEffect(() => {
     dispatch(allCourses());
     dispatch(allCategories());
@@ -33,13 +34,34 @@ export default function Home() {
   return (
     <div className={styles.home}>
       <NavBar />
-      <NavBarCopy
-        setOrderReview={setOrderReview}
-        setCurrentPage={setCurrentPage}
-      />
+      {isTabletOrMobile ? (
+        <div>
+          <Carousel />
 
-      <br />
-      <Carousel />
+          <br />
+          <NavBarCopy
+            setOrderReview={setOrderReview}
+            setCurrentPage={setCurrentPage}
+          />
+        </div>
+      ) : (
+        <div>
+          <NavBarCopy
+            setOrderReview={setOrderReview}
+            setCurrentPage={setCurrentPage}
+          />
+
+          <br />
+          <Carousel />
+        </div>
+      )}
+      {/* // <NavBarCopy
+      //   setOrderReview={setOrderReview}
+      //   setCurrentPage={setCurrentPage}
+      // />
+
+      // <br />
+      // <Carousel /> */}
 
       <CoursesContainer currentCourses={currentCourses} />
       <Pagination

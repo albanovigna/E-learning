@@ -12,9 +12,10 @@
   background-color: rgba(218, 218, 218, 0.855);
 }
 
-
 .container {
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
 }
