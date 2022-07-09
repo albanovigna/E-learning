@@ -1,26 +1,39 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  position: absolute;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(260deg, rgba(11, 82, 91, 1) 0%, rgba(27, 58, 75, 1) 30%, rgba(77, 25, 77, 1) 100%);
-  
-
+  background: linear-gradient(
+    260deg,
+    rgba(11, 82, 91, 1) 0%,
+    rgba(27, 58, 75, 1) 30%,
+    rgba(77, 25, 77, 1) 100%
+  );
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-:root{
+:root {
   --color1: #006466;
-  --color2: #0B525B;
-  --color3: #1B3A4B;
+  --color2: #0b525b;
+  --color3: #1b3a4b;
   --color4: #272640;
-  --color5: #4D194D;
+  --color5: #4d194d;
 
   /* --color5: #4D194D; */
   /* --color5: #4D194D; */
@@ -34,12 +47,12 @@ Monserrat, monospace
 'Faster One', cursive
 'Gugi', cursive
  */
- @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap");
 
- @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital@1&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital@1&display=swap");
 
- @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
 
- @import url('https://fonts.googleapis.com/css2?family=Faster+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Faster+One&display=swap");
 
- @import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Gugi&display=swap");
