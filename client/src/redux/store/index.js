@@ -1,23 +1,24 @@
-import { applyMiddleware, createStore } from "redux";
+import { configureStore } from "@reduxjs/toolkit";
 import { persistStore, persistReducer } from "redux-persist";
-import { composeWithDevTools } from "redux-devtools-extension";
-import thunk from "redux-thunk"; //
-import rootReducer from "../reducer/index";
+import { reduxBatch } from "@manaflair/redux-batch";
 import storage from "redux-persist/lib/storage";
+import rootReducer from "../reducer/index";
+import thunk from "redux-thunk";
 
 const persistConfig = {
   key: "root",
   storage,
-  // blacklist: ["userDetail"],
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
-const store = createStore(
-  persistedReducer,
-  // composeWithDevTools(applyMiddleware(thunk))
-  applyMiddleware(thunk)
-);
+const store = configureStore({
+  reducer: persistedReducer,
+  middleware: [thunk],
+  devTools: false,
+  enhancers: [reduxBatch],
+});
 
 const persistor = persistStore(store);
+
 export { store, persistor };
